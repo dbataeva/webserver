@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    body {
+        background: url(error_page/images/background5.gif);
+    }
+    h1 {
+        /* width: 500px; */
+        text-align: center;
+        background: #3e1f53; /* Цвет фона под заголовком */
+        color: rgba(206, 223, 245, 0.356); /* Цвет текста */
+        padding: 5px; /*Поля вокруг текста */
+    }
+</style>
+<h1 align="center">OOPS!</h1>
+<link href="error_page/css/style.css" rel="stylesheet" type="text/css">
+<br><br>
+
+<!-- <p class="center-pic"><img src="images/2RNE.gif" alt="img" width="500" height="500" /></p> -->
+<script>
+    var a=Math.round(Math.random()*9)
+    // это число должно совпадать с максимальным индексом таблицы изображений
+    document.body.classList.add('center-pic-error');
+    image = new Array();
+    image[0]="error_page/images/error/error0.gif"
+    image[1]="error_page/images/error/error1.gif"
+    image[2]="error_page/images/error/error2.gif"
+    image[3]="error_page/images/error/error3.gif"
+    image[4]="error_page/images/error/error4.gif"
+    image[5]="error_page/images/error/error5.gif"
+    image[6]="error_page/images/error/error6.gif"
+    image[7]="error_page/images/error/error7.gif"
+    image[8]="error_page/images/error/error8.gif"
+    image[9]="error_page/images/error/guss.jpg"
+    // с максимальным индексом image[..] совпадает число, на которое умножаем вверху
+    document.write ("<img src="+image[a]+">");
+</script>
+</body>
+</html>
