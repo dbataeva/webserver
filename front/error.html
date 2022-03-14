@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        </head>>
+<body>
+<style>
+        body {
+                background: url(images/background.jpeg);
+        }
+</style>
+<nav class="top-menu">
+        <ul class="menu-main">
+                <li class="right-item"><a href="index.html">Back to the main page</a></li>
+        </ul>
+</nav>
+<link href="css/style_error_page.css" rel="stylesheet" type="text/css">
+
+<br>
+<script>
+        document.write ("<h1 align=center>"+"OOPS number error: "+"404"+"!!!"+"</h1>");
+</script>
+<br><br>
+<script>
+        var a=Math.round(Math.random()*4)
+        document.body.classList.add('center-pic-error');
+        image = new Array();
+        image[0]="images/error/error0.png"
+        image[1]="images/error/error1.png"
+        image[2]="images/error/error2.gif"
+        image[3]="images/error/error3.gif"
+        image[4]="images/error/error4.gif"
+        document.write ("<img src="+image[a]+">");
+</script>
+</body>
+</html>

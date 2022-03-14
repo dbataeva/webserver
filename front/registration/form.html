@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: url(images/background.jpeg);
+        }
+    </style>
+    <link href="css/style_form_page.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <nav class="top-menu">
+        <ul class="menu-main">
+            <li class="left-item"><a href="https://profile.intra.42.fr/users/cchromos">cchromos</a></li>
+            <li class="left-item"><a href="https://profile.intra.42.fr/users/maragorn">maragorn</a></li>
+            <li class="left-item"><a href="https://profile.intra.42.fr/users/mstyr">mstyr</a></li>
+            <li class="right-item"><a href="../index.html">Back to the main page</a></li>
+        </ul>
+        <!-- <a class="navbar-logo" href=""><img src="images/lama_program/logo.png" height="80" weidth="80" ></a> -->
+    </nav>
+
+</head>
+<body>
+
+<div class="form">
+    <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="signup">
+            <form action="../../cgi-bin/registr/wall.py" method="post">
+                <div class="field-wrap">
+                    <label>
+                        Login <span class="req">*</span>
+                    </label>
+                    <input type="text" name="login" required autocomplete="off">
+                </div>
+                <div class="field-wrap">
+                    <label>
+                        Password <span class="req">*</span>
+                    </label>
+                    <input type="password" name="password" required autocomplete="off">
+                    <input type="hidden" name="action" value="signup">
+                </div>
+                <input class="button button-block" type="submit" value="Register">
+            </form>
+
+        </div>
+
+        <div id="login">
+            <form  action="../../cgi-bin/registr/wall.py" method="post">
+                <div class="field-wrap">
+                    <label>
+                        Login <span class="req">*</span>
+                    </label>
+                    <input id="log" type="text" name="login" required>
+                </div>
+                <div class="field-wrap">
+                    <label>
+                        Password<span class="req">*</span>
+                    </label>
+                    <input id="password" type="password" name="password" required>
+                    <input type="hidden" name="action" value="login">
+                </div>
+                <input class="button button-block" type="submit">
+            </form>
+        </div>
+
+    </div><!-- tab-content -->
+</div> <!-- /form -->
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous">
+</script>
+
+<script>
+    $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+        var $this = $(this),
+            label = $this.prev('label');
+
+        if (e.type === 'keyup') {
+            if ($this.val() === '') {
+                label.removeClass('active highlight');
+            } else {
+                label.addClass('active highlight');
+            }
+        } else if (e.type === 'blur') {
+            if( $this.val() === '' ) {
+                label.removeClass('active highlight');
+            } else {
+                label.removeClass('highlight');
+            }
+        } else if (e.type === 'focus') {
+
+            if( $this.val() === '' ) {
+                label.removeClass('highlight');
+            }
+            else if( $this.val() !== '' ) {
+                label.addClass('highlight');
+            }
+        }
+
+    });
+
+    $('.tab a').on('click', function (e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+
+        target = $(this).attr('href');
+
+        $('.tab-content > div').not(target).hide();
+
+        $(target).fadeIn(600);
+
+    });
+</script>
+
+</html> 

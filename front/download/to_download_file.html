@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <title>File upload</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+<style>
+        body {
+                background: url(../images/background.jpeg);
+        }
+</style>
+<nav class="top-menu">
+        <ul class="menu-main">
+        <li class="left-item"><a href="https://profile.intra.42.fr/users/cchromos">cchromos</a></li>
+        <li class="left-item"><a href="https://profile.intra.42.fr/users/maragorn">maragorn</a></li>
+        <li class="left-item"><a href="https://profile.intra.42.fr/users/mstyr">mstyr</a></li>
+        <li class="right-item"><a href="../index.html">Back to the main page</a></li>
+        </ul>
+</nav>
+<link href="../css/style_user_page.css" rel="stylesheet" type="text/css">
+<h3 align="center">Choose a file to upload</h3>
+<table align="center">
+	<tr>
+	<form enctype="multipart/form-data"  action = "../../cgi-bin/file/save_file.py" method="post">
+		<th><h3>Upload your file to the server</h3> </th>
+		<th><p><input class="photo" type="file" name="photo" multiple accept="text/plain"> <input class="Upload" type="submit" value="Upload"></p></th>
+	</form>
+	</tr>
+</table>
+</body>
+</html>

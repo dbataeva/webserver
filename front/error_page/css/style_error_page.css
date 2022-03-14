@@ -1,0 +1,138 @@
+body {
+    background-color: #0c2020
+}
+
+.center-pic {
+    text-align:center;
+}
+
+.center-pic-error {
+    text-align:center;
+}
+
+.td {
+    border: 1px solid grey;
+}
+
+.reg {
+    /* display: block; */
+    width: 20%;
+    border: none;
+    background-color: #352c39;
+    padding: 14px 28px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+h1 {
+    /* width: 500px; */
+    text-align: center;
+	font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* Цвет текста */
+    padding: 5px; /*Поля вокруг текста */
+}
+
+h2 {
+    /* width: 500px; */
+    text-align: center;
+    background: #3e1f53; /* Цвет фона под заголовком */
+    color: rgba(206, 223, 245, 0.356); /* Цвет текста */
+    padding: 5px; /*Поля вокруг текста */
+}
+
+h3 {
+    padding: 0 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    /* width: 500px; */
+    text-align: center;
+    color: rgb(255, 255, 255); /* Цвет текста */
+}
+
+/* стиль меню */
+@import url('https://fonts.googleapis.com/css?family=Arimo'); 
+.top-menu {
+    position: relative;
+    background: rgba(34,34,34,.2);
+}
+
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left-item {
+    float: left;
+}
+
+.right-item {
+    float: right;
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.menu-main a {
+    text-decoration: none;
+    display: block;
+    line-height: 80px;
+    padding: 0 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: white;
+    transition: .3s linear;
+}
+
+.menu-main a:hover {
+    background: rgba(0,0,0,.3);
+}
+
+@media (max-width: 830px) {
+    .menu-main {
+        padding-top: 90px;
+        text-align: center;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+    }
+
+    .menu-main li {
+        float: none;
+        display: inline-block;
+    }
+
+    .menu-main a {
+        line-height: normal;
+        padding: 20px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 630px) {
+    .menu-main li {
+        display: block;
+    }
+}
+
+
